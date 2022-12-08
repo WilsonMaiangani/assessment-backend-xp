@@ -1,0 +1,138 @@
+=====================================================================
+Objeto para retornar dados de diversas tabela na API
+obs: Pode-se retornar também apenas dados de uma tabela
+
+{
+	"obj": 
+	{
+		"method": "select",
+		"data":
+		{
+			"Category":{},
+			"Imagem":{},
+			"Product":{}			
+		}
+	}
+}
+
+=====================================================================
+Objeto para retornar dados de tabela relacionado na API
+
+{
+	"obj": 
+	{
+		"method": "select",
+		"data":
+		{			
+			"Product":
+			{
+				"join":
+				{
+					"idCategory": "Category",
+					"idImg": "Imagem"
+				}
+			}	
+		}
+	}
+}
+=====================================================================
+Objeto para retornar dados filtrados na API
+obs: o parâmetro "camp" é dinâmico com base o campo existente na tabela
+{
+	"obj": 
+	{
+		"method": "select",
+		"data":
+		{			
+			
+			"Product":
+			{
+				"filter": "where",
+				"parms":
+					{
+						"camp": "id",
+						"value": "1"
+					}
+			}				
+		}
+	}
+}
+=====================================================================
+
+Objeto para cadastrar dados na API
+{
+	"obj": 
+	{
+		"method": "add",
+		"data":
+		{
+			"Category":
+			[
+				{
+				"name": "Roupas",
+				"code": "123"
+				},
+				{
+				"name": "Electro",
+				"code": "1234"
+				}	
+				,
+				{
+				"name": "Vest",
+				"code": "1234"
+				}	
+			]	
+		}
+	}
+}
+=====================================================================
+Objeto para deletar dados na API
+{
+	"obj": 
+	{
+		"method": "delete",
+		"data":
+		{
+			"Category":
+			{
+				"camp": "id",
+				"value": "1"
+			}
+		}
+	}
+}
+=====================================================================
+Objeto para atualizar dados na API
+{
+	"obj": 
+	{
+		"method": "update",
+		"data":
+		{
+			"Category":
+			[	
+				
+				{
+				"name": "Pc-Portatil",
+				"code": "005",
+				"parms":
+					{
+						"camp": "id",
+						"value": "2"
+					}
+				},
+				{
+				"name": "Mesa",
+				"code": "9",
+				"parms":
+					{
+						"camp": "id",
+						"value": "3"
+					}
+				}
+				
+			]	
+		}
+	}
+}
+=====================================================================

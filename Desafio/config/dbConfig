@@ -1,0 +1,10 @@
+{
+    "conexao": {
+        "server": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "Test_",
+        "port": "3306"
+    }
+
+}
